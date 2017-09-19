@@ -1,0 +1,20 @@
+{
+  "name": "node-express-mongo",
+  "version": "1.0.0",
+  "description": "nodejs server with api and mongo db",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "hraboviyvadim@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.0"
+  }
+}
