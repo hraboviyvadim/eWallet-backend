@@ -1,6 +1,9 @@
 const ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
+  app.get('/', (req, res) => {
+    res.send('Welcome to home page!');
+  });
   // GET REQUEST
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;

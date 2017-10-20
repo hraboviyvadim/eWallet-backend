@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const dbConfig = require('./config/db');
+const dbConfig = require('./config').db;
 
 const app = express();
 const port = 8000;
@@ -19,7 +19,7 @@ mongoose.connect(dbConfig.url, options).then(() => {
       console.err(`Error getting MongoDB info: ${err}`);
     } else {
       console.log(`Connection to MongoDB (version ${info.version}) opened successfully!`);
-      require('./app/routes')(app, mongoose.connection.db);
+      require('./routes')(app, mongoose.connection.db);
       app.listen(port, () => {
         console.log('We are live on ' + port);
       });

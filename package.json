@@ -2,17 +2,20 @@
   "name": "node-express-mongo",
   "version": "1.0.0",
   "description": "nodejs server with api and mongo db",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "hraboviyvadim@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "jsonwebtoken": "^8.1.0",
     "mongodb": "^2.2.31",
-    "mongoose": "^4.11.11"
+    "mongoose": "^4.11.11",
+    "mongoose-unique-validator": "^1.0.6"
   },
   "devDependencies": {
     "nodemon": "^1.12.0"
